@@ -20,14 +20,14 @@
         <profile>
 
             <id>first</id>
-                <dependencies>  <!---Здесь указываются библиотеки, они определяются тройкой GAV (groupId artifactId version) -->
-                    <dependency>
-                        <groupId>junit</groupId>
-                        <artifactId>junit</artifactId>
-                        <version>4.4</version>
-                        <scope>test</scope>
-                    </dependency>
-                </dependencies>
+            <dependencies>  <!---Здесь указываются библиотеки, они определяются тройкой GAV (groupId artifactId version) -->
+                <dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>4.4</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
 
             <build>
                 <plugins>
@@ -57,43 +57,43 @@
             </build>
         </profile>
         <profile>
-        <id>second</id>
-        <dependencies>  <!---Здесь указываются библиотеки, они определяются тройкой GAV (groupId artifactId version) -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.4</version>
-                <scope>test</scope>
-            </dependency>
-        </dependencies>
+            <id>second</id>
+            <dependencies>  <!---Здесь указываются библиотеки, они определяются тройкой GAV (groupId artifactId version) -->
+                <dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>4.4</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
 
-        <build>
-            <plugins>
-                <plugin>
-                    <!-- Build an executable JAR -->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.4</version>
-                    <configuration>
-                        <archive>
-                            <manifest>
-                                <addClasspath>true</addClasspath>
-                                <classpathPrefix>lib/</classpathPrefix>
-                                <mainClass>Main_Second</mainClass>
-                            </manifest>
-                        </archive>
-                    </configuration>
-                </plugin>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!-- Build an executable JAR -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <version>2.4</version>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                    <mainClass>Main_Second</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
 
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-pmd-plugin</artifactId>
-                    <version>2.4</version>
-                </plugin>
-            </plugins>
-            <finalName>Hello</finalName>
-        </build>
-    </profile>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-pmd-plugin</artifactId>
+                        <version>2.4</version>
+                    </plugin>
+                </plugins>
+                <finalName>Hello</finalName>
+            </build>
+        </profile>
 
     </profiles>
 </project>
